@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premium Custom-made</title>
 <!-- TikTok Pixel Code Start -->
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PWG2K9KC');</script>
-<!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -19,7 +12,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
 
-  ttq.load('D5FDIDRC77U894MD56H0');
+  ttq.load('D5FSMQBC77U3DS9AQOE0');
   ttq.page();
 }(window, document, 'ttq');
 </script>
@@ -98,17 +91,16 @@ body {
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWG2K9KC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
   <div class="container">
 
     <!-- HERO -->
     <div class="hero">
-      <h2>Private Luxury Access</h2>
+      <h2>Private Access</h2>
       <h3>Direct consultation via WhatsApp</h3>
-
+      <div class="hero-img">
+<img src="https://i.ibb.co/LDCrWPYy/800146c9-adf4-4582-8525-798844ac0940.webp" alt="a1703684397143 1383" border="0">
+      </div>
     </div>
 
     <!-- INTRO -->
@@ -133,11 +125,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- CLIENT IMAGE CAROUSEL -->
     <div class="section">
+      <h2>Customer Feedback</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/zWDxMPjB/2be9f52839485afe34e85911734e16ef.png">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/zWhJ0QT1/2fed99080995bfd1419f072493002bb.png">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/DfWMpvqX/3ce322ed07f01e102215e5e58983939c.png">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/pvsbnsPr/4c093a952113d82b3451373f6788576d.png">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/rfMfq4M2/5e1fbc99f88422a48f46096add1e8ec0.png">
+          </div>
+<div class="carousel-item">
+            <img src="https://i.ibb.co/rJS1Yfv/IMG-3380.jpg">
+          </div>
+<div class="carousel-item">
+            <img src="https://i.ibb.co/9H74KDFC/IMG-4289.jpg">
+          </div>
+<div class="carousel-item">
+            <img src="https://i.ibb.co/7t5v5tXB/IMG-4789.jpg">
+          </div>
+<div class="carousel-item">
+            <img src="https://i.ibb.co/XfTR06Jv/IMG-6190.jpg">
+          </div>
+<div class="carousel-item">
+            <img src="https://i.ibb.co/Q3r3zLHJ/IMG-8944.jpg">
+          </div>
+        </div>
+      </div>
 
 
 
     <!-- CTA -->
     <a
+      id="cta"
     href="https://wa.me/8615006058723"
     class="cta-fixed"
     target="_blank"
@@ -161,6 +189,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       index = (index + 1) % items.length;
       track.style.transform = `translateX(-${index * 100}%)`;
     }, 4000);
+    function buildTkMessage({ name, id, tkUrl, price }) {
+  const hasName = name && name.trim();
+  const hasId   = id && id.trim();
+
+  if (!hasName || !hasId) {
+    return 'Product catalog?';
+  }
+
+  return `https://www.tiktok.com/@${hasName}/video/${hasId}\nPrice?`;
+}
+
+const params = new URLSearchParams(location.search);
+
+const name  = params.get('name');
+const id    = params.get('id');
+const tkUrl = "https://www.tiktok.com/";
+const price = params.get('price') || 'On request';
+
+const message = buildTkMessage({ name, id, tkUrl, price });
+
+const cta = document.getElementById('cta');
+
+if (cta) {
+  cta.href = `https://wa.me/8615006058723?text=${encodeURIComponent(message)}`;
+}
   </script>
 </body>
 </html>
